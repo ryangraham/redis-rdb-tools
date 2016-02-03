@@ -357,8 +357,7 @@ class ProtocolCallback(RdbCallback):
     # Other misc commands
 
     def select(self, db_number):
-        #self.emit('SELECT', db_number)
-        pass
+        self.emit('SELECT', db_number)
 
     def expireat(self, key, timestamp):
         self.emit('EXPIREAT', key, timestamp)
